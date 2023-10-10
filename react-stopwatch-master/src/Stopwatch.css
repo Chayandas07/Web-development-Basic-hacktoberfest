@@ -1,0 +1,58 @@
+.Stopwatch {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Stopwatch-display {
+    flex: 1;
+    order: 1;
+    align-self: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.Stopwatch-number {
+    color: #FFFFFF;
+}
+
+.Stopwatch-button-group {
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+.Stopwatch-button {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+@media (max-width: 575px) {
+    .Stopwatch-number {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 576px) {
+    .Stopwatch-number {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 768px) {
+    .Stopwatch-number {
+        font-size: 6em;
+    }
+}
+
+@media (min-width: 992px) {
+    .Stopwatch-number {
+        font-size: 9em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .Stopwatch-number {
+        font-size: 12em;
+    }
+}
