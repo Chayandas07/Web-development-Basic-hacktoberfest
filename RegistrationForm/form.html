@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="css_task7style.css" />
+</head>
+<body>
+    <main>
+        <div class="container">
+            <form action="#" method="post">
+                <div class="table">
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <label for="Name">Name:</label>
+                        </div>
+                        <div class="table-cell">
+                            <input type="text" id="Name" name="Name" placeholder="your name">
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <label for="email">Email:</label>
+                        </div>
+                        <div class="table-cell">
+                            <input type="email" id="email" name="email"  placeholder="your email">
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <label for="password">Password:</label>
+                        </div>
+                        <div class="table-cell">
+                            <input type="password" id="password" name="password">
+                        </div>
+                    </div>
+                    <div class="table-row">
+                      <div class="table-cell">
+                          <label for="phoneNumber">Phone Number:</label>
+                      </div>
+                      <div class="table-cell">
+                          <input type="text" id="phoneNumber" name="phoneNumber">
+                      </div>
+                  </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <label>Gender:</label>
+                        </div>
+                        <div class="table-cell">                        
+                          <input type="radio" id="male" name="gender" value="Male">
+                          <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="Female">
+                            <label for="female">Female</label>
+                            <input type="radio" id="Other" name="gender" value="Other">
+                            <label for="Other">Other</label>                       
+                        </div>
+                    </div>
+                    <div class="table-row">
+                      <div class="table-cell">
+                          <label for="lang">Language:</label>
+                      </div>
+                      <div class="table-cell">
+                          <select id="lang" name="lang">
+                              <option value="Choose">Select language</option>
+                              <option value="english">English</option>
+                              <option value="hindi">Hindi</option>
+                              <option value="telugu">Telugu</option>
+                              <option value="bengali">Bengali</option>
+                          </select>
+                      </div>
+                  </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <label for="age">Age:</label>
+                        </div>
+                        <div class="table-cell">
+                            <input type="text" id="age" name="age">
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <label for="zip">Zip Code: </label>
+                        </div>
+                        <div class="table-cell">
+                            <input type="text" id="zip" name="zip">
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <label for="about">About:</label>
+                        </div>
+                        <div class="table-cell">
+                            <textarea type="text" id="about" name="about">Write about yourself...</textarea>
+                        </div>
+                    </div>
+                  </div>
+                <div class="btn-container">
+                    <input type="submit" class="btn-register" value="Register">
+                </div>
+            </form>
+              
+    </main>
+</body>
+</html>
