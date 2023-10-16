@@ -1,0 +1,104 @@
+h1 {
+    color: darkblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    color: darkslateblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    width: 550px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: darkblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+section {
+    background-color: rgba(100, 148, 237, 0.795);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-radius: 20px;
+    padding: 25px;
+    font-size: 18px;
+    box-shadow: 0px 1px 2px rgb(96,96,96);
+    text-align: center;
+    width: 500px;
+    margin-left: 400px;
+}
+   
+    
+
+input {
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+    box-shadow: 0px 1px 2px rgb(96,96,96);
+    
+}
+
+#botao {
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+    font-weight: 600;
+    padding: 10px;
+    width: 100px;
+    border-radius: 17px;
+    background-color: white;
+    transition: all 0.3s;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0px 1px 2px rgb(96,96,96);
+}
+
+#botao:hover {
+    color: rgb(1, 1, 187);
+}
+
+#botao:active {
+    opacity: 0.7;
+}
+
+#tabela-title {
+    background-color: rgba(0, 0, 139, 0.932);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    border-collapse: collapse;
+    
+   
+
+    
+}
+
+#tabela-text {
+    background-color:rgba(100, 148, 237, 0.733);
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 17px;
+    border-collapse: collapse;
+  
+}
+
+#imc-div {
+    background-color: rgba(0, 0, 139, 0.795);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 220px;
+    margin-left: 555px;
+    text-align: center;
+    box-shadow: 1px 1px 1px black;
+}
+

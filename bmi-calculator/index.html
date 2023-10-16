@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculadora de IMC </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <h1>Calculadora de IMC</h1>
+
+    <h3>O que é IMC?</h3>
+
+    <p>
+        O <strong>Índice de Massa Corporal</strong>, conhecido pela sigla IMC, é um cálculo simples que permite medir se alguém está ou não com o peso ideal. Ele aponta se o peso está adequado ou se está abaixo ou acima do peso.
+    </p>
+
+     <table border="1">
+        
+        <h3>Tabela de IMC</h3>
+
+       <tr id="tabela-title">
+        <td >IMC</td>
+        <td>Classificação</td>
+       </tr> 
+
+       <tr id="tabela-text">
+        <td>Abaixo de 18,5</td>
+        <td>Abaixo do peso</td>
+       </tr>
+    
+       <tr id="tabela-text">
+        <td>Entre 18,6 e 24,9</td>
+        <td>Peso ideal</td>
+       </tr>
+
+       <tr id="tabela-text">
+        <td>Entre 25,0 e 29,9</td>
+        <td>Levemente acima do peso</td>
+       </tr>
+
+       <tr id="tabela-text">
+        <td>Entre 30,0 e 34,9</td>
+        <td>Obesidade grau I</td>
+       </tr>
+
+       <tr id="tabela-text">
+        <td>Entre 35,0 e 39,9</td>
+        <td>Obesidade grau II (severa)</td>
+       </tr>
+
+       <tr id="tabela-text">
+        <td>Acima de 40</td>
+        <td>Obesidade III (mórbida)</td>
+       </tr>  
+
+       </table>
+
+   <h2>Calcule seu IMC</h2>
+
+    <section>
+   
+       
+        <label> Altura:
+            <input type="text" id="altura" placeholder="Ex: 170" minlength="1" maxlength="6"> cm
+        </label>
+
+        <br> <br>
+
+        <label> Peso:
+            <input type="text" id="peso" placeholder="Ex: 65" maxlength="6"> kg
+        </label>
+
+        <br> <br>
+
+        <input type="button" value="Calcular" onclick="CalcularIMC()" id="botao">
+    
+        </section>
+
+        <br>
+
+        <div id="imc-div">
+            Seu IMC é de: 
+        </div>
+</body>
+</html>
