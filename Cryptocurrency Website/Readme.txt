@@ -1,0 +1,1 @@
+This is a crypto-webpage displaying the real-time rates of three cryptocurriencies namely Bitcoin, Dogecoin and Ethereum.
