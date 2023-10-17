@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-position: center;
+    background-size: cover;
+    padding: 0 7%;
+    color: #fff;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+nav ul{
+    flex: 1;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn{
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.content{
+    margin-top: 12%;
+}
+
+.content h1{
+    font-size: 88px;
+    margin-bottom: 15px;
+}
+
+.content h1 span{
+    color: #ff960b;
+}
+
+.content p{
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.content a{
+    text-decoration: none;
+    border: 1px solid #ff960b;
+    background: #ff960b;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+.coin-list{
+    position: absolute;
+    display: flex;
+    right: 10%;
+    bottom: 50px;
+    align-items: center;
+}
+
+.coin{
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    color: #ff960b;
+    border: 1px solid #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.coin img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.coin h3{
+    color: #fff;
+    margin-bottom: 5px;
+}
