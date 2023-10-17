@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btn1').click(function () {
+                var num1 = parseInt($('#num1').val());
+                var num2 = parseInt($('#num2').val()) - 1; // Subtract 1 to account for zero-based months
+                var num3 = parseInt($('#num3').val());
+                const birthDate = new Date(num3, num2, num1);
+                const currentDate = new Date();
+
+                if (birthDate > currentDate) {
+                    $('#output').html("Invalid birthdate");
+                } else {
+                    let years = currentDate.getFullYear() - birthDate.getFullYear();
+                    let months = currentDate.getMonth() - birthDate.getMonth();
+                    let days = currentDate.getDate() - birthDate.getDate();
+
+                    if (days < 0) {
+                        months--;
+                        days += new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
+                    }
+
+                    if (months < 0) {
+                        years--;
+                        months += 12;
+                    }
+
+                    $('#output').html(`Your age is: ${years} years, ${months} months, ${days} days`);
+                }
+            });
+        })
+    </script>
+</head>
+<style>
+    .main {
+        margin: 0 auto;
+        padding: 15px;
+        margin-top: 50px;
+        width: 400px;
+        text-align: center;
+    }
+
+    label {
+        color: blue;
+    }
+
+    input {
+        border: 2px solid black;
+        margin-top: 2px;
+        width: 100%;
+        color: blue;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+</style>
+<body>
+<div class="main">
+    <h1 style="background-color: blue; color: white">Age Calculator</h1>
+    <h2 style="color: red;">ENTER YOUR BIRTHDATE</h2>
+    <label>Day</label> <br>
+    <input type="text" id="num1"><br><br>
+    <label>Month</label> <br>
+    <input type="text" id="num2"><br><br>
+    <label>Year</label> <br>
+    <input type="text" id="num3"> <br>
+    <button type="button" id="btn1" class="btn btn-primary btn-lg">Calculate Age</button>
+    <div id="output"></div>
+</div>
+</body>
+</html>
