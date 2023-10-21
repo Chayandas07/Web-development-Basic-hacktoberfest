@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Password generator</title>
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MD5 hashing function -->
+<script src="https://thecode.media/wp-content/uploads/2019/05/js-md5.js"></script>
+<style type="text/css">
+body
+{ 
+    text-align: center; 
+    margin: 10; 
+    font-family: Verdana, Arial, sans-serif; 
+    font-size: 16px;
+}
+input
+{ 
+    display: inline-block; 
+    margin: 20px auto; border: 2px solid #4a1079; 
+    padding: 10px 20px; 
+    font-family:Verdana, Arial, sans-serif; 
+    font-size: 16px;
+}
+</style>
+</head>
+<body>
+    <div class="container"  margin: auto;">
+        <h2 class="todo__caption">Password generator</h2>
+        <br>
+        <input type="text" id="site_url" size="50" placeholder="Where do you need this password? Paste the address">
+        <br>
+        <input type="text" id="keyword" size="50" placeholder="Some key word here">
+        <br> <br>
+        <button style="font-size: 100%; padding:5px 10px 10px 10px" onclick="generate()">Generate password</button>
+        <p>Your password is:</p>
+        <div id = "pass_text" style="font-weight: bold"></div>  
+    </div>
+    <script>
+        var site, salt;
+        var text, password;
+        function generate()
+        {
+            site = document.getElementById('site_url').value;
+            salt = document.getElementById('keyword').value;
+            text = site + salt + 'Practicum Rules';
+            password = md5(text);
+            document.getElementById('pass_text').innerHTML=password;
+        }
+    </script>
+</body>
+</html>
