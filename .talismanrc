@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: Search Bar/yarn.lock
+  checksum: 3aa2a354bcdab7bc6969ff6cbc8ba618498bb208105009d18f57ad441ac2d061
+version: ""
