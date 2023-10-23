@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.main{
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.grid-main{
+  display: grid;
+  grid-template-columns: auto;
+  gap: 20px;
+}
+
+.grid-child{
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+
+.news-image{
+  width: 100%;
+}
+
+.news-title{
+  font-size: 25px;
+  font-weight: 600;
+
+
+}
+
+.news-content{
+  font-size: 16px;
+}
+
+.news-author{
+  font-size: 14px;
+}
+
+.news-date{
+  font-size: 14px;
+
+}
+.space-between{
+  display: flex;
+  justify-content: center;
+}
+
+.select{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  width: 370px;
+}
+
+.select-box{
+  width: 200px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  padding: 10px;
+  
+}
