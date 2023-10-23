@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICTIONARY</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <audio id="sound"></audio>
+   <div class="card">
+    <div class="search">
+        <input type="text" placeholder="enter any word " id="searchinput">
+        <button id="searchbutton"><img src="search.png" alt=""></button>
+    </div>
+    <div class="errormessage" id="errormsg">
+        <h3>COULD  NOT FIND THE WORD</h3>
+    </div>
+ 
+  <div class="result" id="result">
+   <div class="word">
+    <h3>Sample</h3>
+    <button  onclick="playSound()"><i class="fa-solid fa-volume-high fa-2xl"></i></button>
+
+   </div>
+<div class="details">
+     <p>pos</p>
+    <p>/sample/</p>
+   
+</div>
+<p class="word-meaning">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, iste?
+</p>
+<p class="word-example">Lorem ipsum dolor sit amet.</p>
+  </div>
+   </div> 
+   
+  
+   <script src="index.js"></script>
+   <script src="https://kit.fontawesome.com/8c9b0ad18f.js" crossorigin="anonymous"></script>
+</body>
+</html>

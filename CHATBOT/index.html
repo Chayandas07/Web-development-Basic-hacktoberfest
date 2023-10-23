@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To My Chatbot</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="apiId">
+        
+        <label for="apikey">ENTER YOUR API KEY HERE</label>
+        <input type="text" name="">
+        <button class="subit-api">Submit API Key</button>
+        <!-- < <input type="text" name="api" id="api"> --> 
+         <h3>Generate your own API KEY BY <br><a href="https://platform.openai.com/account/api-keys">clicking here</a></h3>
+    </div>  
+    <button class="chatbot-toggler">
+        <span class="material-symbols-outlined">mode_comment
+        </span>
+        <span class="material-symbols-outlined" id="close-chat-btn">close
+        </span>
+    </button>
+    <div class="chatbot">
+        <header><h2> Welcome to Chatbot </h2></header>
+    <ul class="chatbox">
+        <li class="chat incoming">
+            <span class="material-symbols-outlined">smart_toy
+            </span>
+            <p>Hi there &#128075; <br> Welcome to my chatbot <br>How can I help you today</p>
+        </li>
+       
+    </ul>
+    <div class="chat-input">
+        <textarea placeholder="Enter your message here ...  " spellcheck="false" style="height: 5vh; width: 70%; "></textarea>
+        <span id="send-btn" class="material-symbols-outlined">send</span>
+    </div>
+<script src="index.js" defer></script>    
+</body>
+</html>
