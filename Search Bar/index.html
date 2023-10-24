@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Search Bar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="bundle.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid bootstrap">
+        <div class="row">
+            <div id="search" class="col-md-8 col-sm-12 col-xs-12">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <div id="searchHeader" class="row">
+                            <div id="branding" class="col-md-3 col-sm-3 col-xs-12">
+                                <span id="brandingTitle">Search</span>
+                            </div>
+                            <div id="searchBarArea" class="col-md-9 col-sm-9 col-xs-12">
+                                <div class="" id="searchBar">
+                                    <form id="searchForm">
+                                        <input type="text" autocomplete="off" name="search" id="searchBox"
+                                            class="form-control input-lg">
+                                    </form>
+                                    <div id="searchList" style="display: none;" class="displayBlock">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content">
+                            <div class="hrLine"></div>
+                            <div id="contentMeta"></div>
+                            <div id="mainContent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="searchContent" class="col-md-4 col-sm-12 col-xs-12">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div id="contentRepo" class="col-xs-10">
+                                <div class="entryHeader">All Entries</div>
+                                <p>(List of all searchable entries)</p>
+                                <div id="entryList" class="entryList">
+
+                                </div>
+                            </div>
+                            <div id="contentEntryForm" class="col-xs-10">
+                                <p>(Fill this form to add into the list of searchable entries)</p>
+                                <form>
+                                    <div class="form-outline form-field">
+                                        <input type="text" id="entryTitle" placeholder="Title" class="form-control"
+                                            required />
+                                    </div>
+
+                                    <div class="form-outline form-field">
+                                        <input type="text" id="entryLink" placeholder="Link" class="form-control"
+                                            required />
+                                    </div>
+
+                                    <div class="form-outline form-field">
+                                        <textarea class="form-control" placeholder="Description" id="entryDescription"
+                                            rows="4" required></textarea>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary btn-block">Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "autosuggest-trie": "^2.1.1",
+    "js-levenshtein": "^1.1.6"
+  }
+}
