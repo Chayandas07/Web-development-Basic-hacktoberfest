@@ -1,0 +1,129 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e0f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container for centering */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* Title styling */
+.title {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.title:hover {
+  color: #0056b3;
+}
+
+/* Card styling */
+.card {
+  background-color: #f1f8e9;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 400px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #e8f5e9;
+}
+
+/* Flavor output */
+.flavor {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Image styling */
+.flavor-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Button styles */
+.btn {
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .flavor {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
