@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Code With Hossein</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #151320;
+        }
+
+        /* Box container */
+        .box {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            color: #fff;
+            background: #151320;
+            font: 700 2rem 'Montserrat';
+            line-height: 400px;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 50%;
+            /* Makes the box circular */
+            z-index: 1;
+            /* Ensures the box is above the frame */
+            transition: transform 0.3s ease;
+            /* Add transition for smooth hover effect */
+            transform-style: preserve-3d;
+            /* For 3D effect */
+            will-change: transform;
+            /* Optimizes the transformation */
+        }
+
+        /* 3D effect on hover */
+        .box:hover {
+            transform: rotateY(15deg) rotateX(15deg);
+            /* Slight 3D tilt on hover */
+        }
+
+        /* Moving part of the white border with purple glow */
+        .box::before,
+        .box::after {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            width: calc(100% + 30px);
+            height: calc(100% + 30px);
+            top: -15px;
+            left: -15px;
+            border-radius: 50%;
+            /* Matches the circular shape of the box */
+            background: linear-gradient(45deg, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 80%);
+            background-size: 300%;
+            animation: borderMove 4s linear infinite;
+            box-shadow: 0 0 30px 20px rgba(128, 0, 255, 0.8);
+            /* Purple glow effect */
+        }
+
+        .box::after {
+            filter: blur(50px);
+            /* Blurred glow effect */
+        }
+
+        /* Frame behind the box */
+        .frame {
+            position: absolute;
+            top: -40px;
+            /* Adjust as necessary */
+            left: -40px;
+            /* Adjust as necessary */
+            width: 480px;
+            /* Adjust size to be slightly bigger than the .box */
+            height: 480px;
+            /* Adjust size to be slightly bigger than the .box */
+            z-index: -2;
+            /* Puts the frame behind the box */
+        }
+
+        /* Overlay with name */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            /* Semi-transparent black background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2rem;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 50%;
+            /* Keeps the overlay circular */
+            line-height: 1.2;
+            /* Reduce the line height to reduce vertical gaps */
+        }
+
+        .overlay div {
+            margin: 5px 0;
+            /* Controls the space between the divs */
+            font-size: 1.2rem;
+            /* Adjust font size if needed */
+        }
+
+        /* Add margin above the links */
+        .overlay .links {
+            margin-top: 25px;
+            /* Add a slight gap above the links */
+        }
+
+
+
+        /* Show the overlay on hover */
+        .box:hover .overlay {
+            opacity: 1;
+        }
+
+
+
+        /* Animation for moving border */
+        @keyframes borderMove {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 300%;
+            }
+        }
+
+        @media (prefers-reduced-motion) {
+            .box {
+                transform: none !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+        <!-- Frame PNG behind the box -->
+        <img class="frame" src="frame.png" alt="Frame" />
+        <!-- Image inside the circular box -->
+        <img src='./pic.png' alt="Image Description"
+            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        <!-- Name overlay -->
+        <div class="overlay">
+            <div>name</div>
+            <div>coloumn </div>
+            <div class="links">links</div>
+        </div>
+
+
+
+        <script>
+            const card = document.querySelector(".box");  // Selecting the box class
+            const THRESHOLD = 15;
+
+            function handleHover(e) {
+                const { clientX, clientY, currentTarget } = e;
+                const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;
+
+                const horizontal = (clientX - offsetLeft) / clientWidth;
+                const vertical = (clientY - offsetTop) / clientHeight;
+
+                const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
+                const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
+
+                currentTarget.style.transform =
+                    `perspective(${currentTarget.clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg)`;
+            }
+
+            function resetStyles(e) {
+                e.currentTarget.style.transform =
+                    `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
+            }
+
+            const motionMatchMedia = window.matchMedia("(prefers-reduced-motion)");
+
+            if (!motionMatchMedia.matches) {
+                card.addEventListener("mousemove", handleHover);
+                card.addEventListener("mouseleave", resetStyles);
+            }
+        </script>
+
+</body>
+
+</html>
