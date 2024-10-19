@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #151320;
+}
+
+.box {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    color: #fff;
+    background: #151320;
+    font: 700 2rem 'Montserrat';
+    line-height: 400px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 50%; /* Makes the box circular */
+    z-index: 1; /* Ensures the box is above the frame */
+}
+
+/* Moving part of the white border with purple glow */
+.box::before,
+.box::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    top: -15px;
+    left: -15px;
+    border-radius: 50%; /* Matches the circular shape of the box */
+    background: linear-gradient(45deg, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 80%);
+    background-size: 300%;
+    animation: borderMove 4s linear infinite;
+    box-shadow: 0 0 30px 20px rgba(128, 0, 255, 0.8); /* Purple glow effect */
+}
+
+.box::after {
+    filter: blur(50px); /* Blurred glow effect */
+}
+
+/* Frame behind the box */
+.frame {
+    position: absolute;
+    top: -40px; /* Adjust as necessary */
+    left: -40px; /* Adjust as necessary */
+    width: 480px; /* Adjust size to be slightly bigger than the .box */
+    height: 480px; /* Adjust size to be slightly bigger than the .box */
+    z-index: -2; /* Puts the frame behind the box */
+}
+
+@keyframes borderMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 300%;
+    }
+}
