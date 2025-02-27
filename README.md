@@ -50,7 +50,7 @@ If you are new to **Hacktoberfest**, follow these steps to contribute:
 1. **Fork the repository** by clicking the Fork button on the top right.
 2. **Clone your forked repository** to your local system:
    
-sh
+```sh
    git clone https://github.com/your-username/Web-development-Basic-hacktoberfest.git
 
 3. Create a new branch for your changes: git checkout -b feature-new-feature
